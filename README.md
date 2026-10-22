@@ -1,365 +1,217 @@
-<!-- LOGOTIPO DO PROJETO -->
-<div style="display: flex; justify-content: center;">
-   <a href="https://github.com/SEU-USUARIO/SEU-PROJETO">
-     <img src="docs/figures/logo.png" alt="Logo" width="200" height="100">
-   </a>
-</div>
-
-<h3 align="center">NomeDoProjeto</h3>
-
-<div style="display: flex; justify-content: center;">
-  <a href="https://doi.org/SEU-DOI">
-    <img src="https://zenodo.org/badge/SEU_BADGE.svg" alt="DOI">
-  </a>
-</div>
-
-<p align="center">
- Uma descrição curta e genérica do projeto. Substitua por um resumo real quando usar este template.
- <br />
- <a href="https://github.com/SEU-USUARIO/SEU-PROJETO"><strong>Explore os documentos »</strong></a>
- <br />
- <br />
- <a href="https://github.com/SEU-USUARIO/SEU-PROJETO">Ver demonstração</a>
- ·
- <a href="https://github.com/SEU-USUARIO/SEU-PROJETO">Relatar bug</a>
- ·
- <a href="https://github.com/SEU-USUARIO/SEU-PROJETO">Solicitar recurso</a>
-</p>
-
-
-
+# Como instalar/configurar/usar o `Chromium` no `Linux Ubuntu`
 
 ## Resumo
 
-Resumo genérico do projeto. Explique o problema, o objetivo e o valor da solução em 2-4 linhas.
+Guia para instalar e iniciar o navegador `Chromium` no `Linux Ubuntu` pelo `Terminal Emulator`, usando o pacote `chromium-browser` dos repositórios oficiais do `Ubuntu`. Nas versões atuais, esse pacote `apt` é de transição e instala o `Chromium` como `Snap`.
 
 ## _Abstract_
 
-_Generic abstract in English. Summarize the purpose, scope, and outputs in 2-4 lines._
-
-
+_A guide to install and launch the `Chromium` browser on `Linux Ubuntu` through the `Terminal Emulator`, using Ubuntu's official `chromium-browser` package. On current releases, this `apt` package is transitional and installs `Chromium` as a `Snap`._
 
 ## Descrição
 
-`<nome_da_aplicacao>`
+### `Chromium`
 
-Colocar a descrição da aplicação/subaplicação aqui.
+O `Chromium` é um navegador de código aberto que serve de base para diversos navegadores. No `Ubuntu`, o pacote `chromium-browser` dos repositórios oficiais é um pacote de transição para o `Snap`; portanto, instalar com `apt` não significa instalar um navegador empacotado integralmente como `.deb`.
 
-<!-- COMEÇANDO -->
-### Começando
+## Pré-requisitos
 
-Este template mostra como documentar a configuração local do projeto. Substitua pelos passos reais.
+- Permissão para usar `sudo`
+- Repositórios oficiais do `Ubuntu` habilitados, incluindo `universe`
+- Conexão com a internet
+- `apt` funcional para instalar o pacote de transição `chromium-browser`
+- Serviço `snapd` ativo para instalar e executar o navegador
 
 
+## 1. Abrir o `Terminal Emulator`
 
-### Pré-requisitos
+1. Abrir o `Terminal Emulator`. Você pode fazer isso pressionando:
 
-Lista genérica de ferramentas necessárias. Ajuste versões e remova o que não se aplica.
+    ```bash
+    Ctrl + Alt + T
+    ```
 
-* [![Python](https://img.shields.io/badge/Python-3.x-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
 
-* [![Anaconda](https://img.shields.io/badge/Anaconda-4.x-44A833?style=flat-square&logo=anaconda&logoColor=white)](https://www.anaconda.com/)
+2. Certifique-se de que seu sistema esteja limpo e atualizado.
 
-* [![Git](https://img.shields.io/badge/Git-2.x-F05032?style=flat-square&logo=git&logoColor=white)](https://git-scm.com/)
+    2.1 Limpar o `cache` do gerenciador de pacotes `apt`. Especificamente, ele remove todos os arquivos de pacotes (`.deb`) baixados pelo `apt` e armazenados em `/var/cache/apt/archives/`. Digite o seguinte comando:
 
-* [![VS Code](https://img.shields.io/badge/VS%20Code-1.x-007ACC?style=flat-square&logo=visual-studio-code&logoColor=white)](https://code.visualstudio.com/) ou qualquer IDE compatível
+    ```bash
+    sudo apt clean
+    ```
 
-<p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
+    2.2 Remover pacotes `.deb` antigos ou duplicados do `cache` local. É útil para liberar espaço, pois remove apenas os pacotes que não podem mais ser baixados (ou seja, versões antigas de pacotes que foram atualizados). Digite o seguinte comando:
 
+    ```bash
+    sudo apt autoclean
+    ```
 
+    2.3 Remover pacotes que foram automaticamente instalados para satisfazer as dependências de outros pacotes e que não são mais necessários. Digite o seguinte comando:
 
+    ```bash
+    sudo apt autoremove -y
+    ```
 
-## Guia de instalação
+    2.4 Buscar as atualizações disponíveis para os pacotes que estão instalados em seu sistema. Digite o seguinte comando e pressione `Enter`:
 
-### Instalar o Git
+    ```bash
+    sudo apt update
+    ```
 
-Explique como instalar o Git ou remova esta seção se não for necessária.
+    2.5 **Corrigir pacotes quebrados**: Isso atualizará a lista de pacotes disponíveis e tentará corrigir pacotes quebrados ou com dependências ausentes:
 
-<p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
+    ```bash
+    sudo apt --fix-broken install
+    ```
 
+    2.6 Limpar o `cache` do gerenciador de pacotes `apt` novamente:
 
+    ```bash
+    sudo apt clean
+    ```
 
-## Guia de instalação
+    2.7 Para ver a lista de pacotes a serem atualizados, digite o seguinte comando e pressione `Enter`:
 
-### Instalar o Git
+    ```bash
+    sudo apt list --upgradable
+    ```
 
-Reforço do conteúdo ou seção extra. Mantenha ou remova conforme o uso do template.
+    2.8 Realmente atualizar os pacotes instalados para as suas versões mais recentes, com base na última vez que você executou `sudo apt update`. Digite o seguinte comando e pressione `Enter`:
 
-<p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
+    ```bash
+    sudo apt full-upgrade -y
+    ```
 
 
+## 3. Instalar o `Chromium` via `apt`
 
-#### `Windows` [2]
+No `Ubuntu 22.04` e em versões atuais, `chromium-browser` é um pacote de transição: o navegador propriamente dito é instalado como `Snap`.
 
-Explique como configurar SSH no Windows (ou ajuste para o provedor desejado).
+1. Habilitar `universe` e atualizar a lista de pacotes:
 
-1. Verifique se o Git está instalado.
-2. Abra o Git Bash.
-3. Gere uma chave SSH (`ssh-keygen -t rsa -C "seu_email@exemplo.com"`).
-4. Adicione a chave no provedor (GitHub/GitLab/Bitbucket).
+    ```bash
+    sudo add-apt-repository universe
+    sudo apt update
+    ```
 
-<p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
+2. Instalar o pacote de transição pelo `apt`:
 
+    ```bash
+    sudo apt install chromium-browser
+    ```
 
+3. Instalar o navegador pelo `Snap`. O comando `snap install` não aceita a opção `-y`:
 
-### Atualizar pacotes `pip` e `setuptools` [3]
+    ```bash
+    sudo snap install chromium
+    ```
 
-Exemplo genérico de atualização de pacotes:
+4. Confirmar a instalação:
 
-1. `pip install --upgrade pip`
-2. `pip install --upgrade setuptools`
-3. `pip install --upgrade wheel`
+    ```bash
+    snap list chromium
+    chromium --version
+    ```
 
+A instalação pode levar alguns minutos para baixar e configurar o pacote.
 
 
-### Clonar o repositório do Git e instalar dependências
+## 4. Executar o `Chromium`
 
-#### `Linux`
+1. Iniciar o navegador pelo comando:
 
-1. **Clone o repositório:**
+    ```bash
+    chromium
+    ```
 
-  - **Pelo terminal:** `git clone git@github.com:SEU-USUARIO/SEU-PROJETO.git`
+2. Também é possível abrir o `Chromium` pelo menu de aplicativos do `Ubuntu`.
 
-  - **(Ou)** baixar o `.zip` na página do GitHub
+3. Para conferir a versão instalada:
 
-  <p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
+    ```bash
+    chromium --version
+    snap list chromium
+    ```
 
 
+## 5. Atualizar ou remover o `Chromium`
 
-#### `Windows`
+O `Snap` atualiza os aplicativos automaticamente. Para solicitar a atualização manualmente:
 
-1. **Clone o repositório:**
+    ```bash
+    sudo snap refresh chromium
+    ```
 
-  - **Pelo terminal:** `git clone git@github.com:SEU-USUARIO/SEU-PROJETO.git`
+Para remover o navegador:
 
-  - (Ou) baixar o `.zip` na página do GitHub
+    ```bash
+    sudo snap remove chromium
+    ```
 
-  <p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
+O pacote `chromium-browser` do `apt` é apenas a ponte de transição; a remoção do aplicativo é feita pelo `snap`.
 
+## 6. Solução de problemas
 
+1. Se `sudo apt update` falhar com erros indicando que não consegue abrir arquivos ou renomear arquivos em `/var/lib/apt/lists/partial`, recrie o diretório de índices temporários com as permissões esperadas e tente atualizar novamente:
 
-## Como executar a aplicação
+    ```bash
+    sudo install -d -o _apt -g root -m 700 /var/lib/apt/lists/partial
+    sudo apt update
+    ```
 
-### Executar a partir do `Terminal Emulator`
+2. Se a instalação via `apt` falhar porque não há candidato para `chromium-browser`, confirme que `universe` está habilitado e repita a atualização dos índices:
 
-1. Exemplo genérico de execução:
+    ```bash
+    sudo add-apt-repository universe
+    sudo apt update
+    apt policy chromium-browser
+    ```
 
-```bash
-python3 main.py --input caminho/para/arquivo --output caminho/para/saida
-```
+3. Se o `Snap` não instalar ou o comando não responder, confirme que `snapd` está ativo e consulte o estado da instalação:
 
-<p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
+    ```bash
+    systemctl status snapd
+    snap changes
+    sudo systemctl start snapd
+    ```
 
 
+## Compatibilidade
 
+- O procedimento se aplica às versões do `Ubuntu` cujos repositórios disponibilizam `chromium-browser`.
+- Em versões atuais, o pacote `apt` é transitório e entrega o navegador como `Snap`; requer `snapd`.
+- A disponibilidade e a versão podem variar conforme a versão do `Ubuntu` e a arquitetura. Consulte o catálogo oficial de pacotes antes de instalar.
 
-### Executar a partir da `Graphical User Interface (GUI)`
-
-1. Exemplo genérico de execução:
-
-```bash
-python3 scripts/app_gui.py
-```
-
-
-
-## Mostrar ajuda
-
-1. Exemplo genérico de ajuda:
-
-```bash
-python3 main.py --help
-```
-
-
-
-### Exemplo de Saída Esperada
-
-Exemplo genérico (substitua pelo help real do projeto):
-
-```bash
-usage: main.py [-h] --input INPUT [--output OUTPUT]
-```
-
-
-
-## O que o aplicativo faz?
-
-Describe in English, at a high level, what the application does and the main outputs.
-
-- Example capability 1
-- Example capability 2
-- Example capability 3
-
-
-
-
-## O que o aplicativo exibe como saída(s)
-
-# Relatório de Análise de Dados
-
-## 1. Introdução
-
-- Objetivo da análise: descrição genérica.
-- Descrição do conjunto de dados analisado: origem, tamanho, formato.
-- Metodologia utilizada para a análise.
-
-## 2. Estatísticas Gerais do Conjunto de Dados
-
-- Número total de variáveis.
-- Número total de registros.
-- Tipos de dados por variável.
-- Resumo da ocupação de memória.
-
-## 3. Qualidade dos Dados
-
-- Valores faltantes: contagem e percentual.
-- Valores únicos por variável.
-- Distribuição de valores nulos ou infinitos.
-- Detecção de espaços em branco no início/fim.
-
-## 4. Estatísticas Descritivas das Variáveis Numéricas
-
-- Contagem de valores válidos.
-- Média, mediana, moda.
-- Desvio padrão e variância.
-- Valor mínimo e máximo.
-- Quartis.
-
-## 5. Análise de Outliers
-
-- Critério de outliers (ex.: 1.5x IQR).
-- Variáveis com maior presença de outliers.
-
-## 6. Correlações Entre Variáveis
-
-- Matriz de correlação.
-- Variáveis altamente correlacionadas.
-
-## 7. Estatísticas de Variáveis Categóricas
-
-- Contagem de ocorrências por categoria.
-- Percentual de distribuição por categoria.
-
-## 8. Análise de Tendências Temporais (se aplicável)
-
-- Distribuição temporal dos dados.
-- Identificação de padrões sazonais.
-
-## 9. Conclusões e Próximos Passos
-
-- Resumo dos principais insights.
-- Sugestões de melhorias/transformações.
-- Próximos passos.
-
-
-## Gráficos Essenciais no Relatório
-
-- Histogramas
-- Boxplots
-- Heatmap de correlação
-- Gráfico de dispersão
-- Gráficos de barras
-- Linha do tempo (se aplicável)
-
-
-
-## 1. Função da Aplicação
-
-Descrição genérica da função principal do módulo.
-
-### 1.1 Entrada(s)
-
-1. Formatos de arquivo suportados (ex.: `.csv`, `.xlsx`).
-
-### 1.2 Saída(s)
-
-1. Descrição das saídas esperadas.
-
-
-
-## 2. Observação(ões)
-
-1. Observações gerais e boas práticas.
-2. Restrições conhecidas.
-
-
-
-# 3. Futura(s) Melhoria(s)
-
-- Lista de melhorias planejadas.
-
-
-
-<!-- LICENÇA -->
 ## Licença
 
-Distribuído sob a licença `MIT`. Consulte `LICENSE.txt` para obter mais informações.
+Este repositório contém um tutorial de instalação; consulte `LICENSE.txt` para os termos aplicáveis ao conteúdo.
 
-<p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
+## Contato e suporte
 
-
-
-<!-- ROTEIRO -->
-## Roteiro
-
-- [ ] Adicionar registro de alterações
-- [ ] Adicionar links de volta ao topo
-- [ ] Adicionar modelos adicionais com exemplos
-- [ ] Suporte multilíngue
-
-Consulte os problemas abertos para obter uma lista completa dos recursos propostos.
-
-<p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
-
-
-
-
-<!-- CONTRIBUIÇÔES -->
-## Contribuições
-
-Explique como contribuir (fork, branch, PR, issues).
-
-1. Bifurque o projeto
-2. Crie sua ramificação (`git checkout -b feature/NovaFuncionalidade`)
-3. Confirme suas alterações (`git commit -m 'Describe change'`)
-4. Envie para a filial (`git push origin feature/NovaFuncionalidade`)
-5. Abra uma solicitação `pull`
-
-<p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
-
-
-
-
-<!-- ACKNOWLEDGMENTS -->
-## Agradecimentos
-
-* [Best README Template](https://github.com/othneildrew/Best-README-Template?tab=readme-ov-file)
-
-* [Choose an Open Source License](https://choosealicense.com)
-
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-
-* [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
-
-* [Malven's Grid Cheatsheet](https://grid.malven.co/)
-
-* [Img Shields](https://shields.io)
-
-* [GitHub Pages](https://pages.github.com)
-
-* [Font Awesome](https://fontawesome.com)
-
-* [React Icons](https://react-icons.github.io/react-icons/search)
-
-<p align="right">(<a href="#readme-top">voltar ao topo</a>)</p>
-
-
-
+Para dúvidas sobre o navegador, consulte o projeto oficial do `Chromium` e a documentação da sua versão do `Linux Ubuntu`.
 
 ## Referências
 
-[1] Fonte ou documentação relevante.
-[2] Artigo, tutorial ou manual adicional.
-[3] Outro link útil.
+[1] OPENAI.
+**Instalar o `chromium` no `linux ubuntu` pelo `terminal emulator`**.
+Disponível em: <https://chatgpt.com/g/g-p-6980caf949648191ad6acfcdbe590f9e-instalar/c/6ad96d91-b0e8-83e8-ac88-6f29067d663e>.
+ChatGPT.
+Acessado em: 21/10/2026.
 
+[2] UBUNTU DEVELOPERS.
+**Pacote `chromium-browser` no `Ubuntu`**.
+Disponível em: <https://packages.ubuntu.com/chromium-browser>.
+Ubuntu Packages.
+Acessado em: 21/10/2026.
+
+[3] UBUNTU.
+**Transição do `Chromium` no `Ubuntu` de `deb` para `Snap`**.
+Disponível em: <https://ubuntu.com/blog/chromium-in-ubuntu-deb-to-snap-transition>.
+Ubuntu.
+Acessado em: 21/10/2026.
+
+[4] THE CHROMIUM PROJECT.
+**Projeto `Chromium`**.
+Disponível em: <https://www.chromium.org/>.
+Chromium Project.
+Acessado em: 21/10/2026.
