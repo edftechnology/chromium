@@ -1,0 +1,22 @@
+\documentclass[12pt]{article} % Tamanho de letra 12, papel A4, Estilo de artigo
+
+\input{preamble.tex}
+\input{variables.tex}
+
+\begin{document}
+	
+	% Epígrafe:
+	\thispagestyle{empty}
+	\ifhyperref\pdfbookmark[0]{\nameepigraphe}{epigrafe}\fi
+	\begin{flushright}
+		\begin{spacing}{1}
+			\mbox{}\vfill
+			\vspace*{1.0cm}
+			{\sffamily\itshape
+				\textcolor{black}{``Bendita seja todas as formas de inteligência.''}}. \\
+			--- \textcolor{black}{\textsc{Atribuída a Clarice Linspector (1920 - 1977); Frase citada no filme Animatrix (2003)}} \\
+			\vspace*{1.0cm}
+		\end{spacing}
+	\end{flushright}
+
+\end{document}

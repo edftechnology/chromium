@@ -1,0 +1,111 @@
+\documentclass[12pt]{article} % Tamanho de letra 12, papel A4, Estilo de artigo
+
+\input{preamble.tex}
+\input{variables.tex}
+
+\begin{document}
+	
+	% 11. Apêndices: Material complementar que é relevante, mas não essencial para a compreensão principal do texto.		
+	\newpage
+	%\shipout\null % Inserir página em branco
+	\appendix
+	
+	% QUANDO FINALIZAR O TRABALHO, MANTER \mycmd{1} 
+	\def\mycmd{1} % \mycmd{1} Inserir o apêndice das tabelas
+	
+	\ifx\mycmd\undefined
+	
+	\newpage
+	\section{Código Python: \texttt{kmeans.py}}\label{apx:kmeans}
+	
+	\lstinputlisting[language=Python]{Subrotinas/programa_para_o_prof/kmeans.py}
+	
+	\newpage
+	\section{Código VBA: AtualizarDadosDasAeronaves.xlsx}\label{apx:A}
+	
+	\lstinputlisting[language=Python]{Subrotinas/programa_para_o_prof/AtualizarDadosDasAeronaves.txt}
+	
+	\newpage
+	\section{Código VBA: AcelerarExcel.xlsx}\label{apx:B}
+	
+	\lstinputlisting[language=Python]{Subrotinas/programa_para_o_prof/AcelerarExcel.txt}
+	
+	\section{Código VBA: DesacelerarExcel.xlsx}\label{apx:C}
+	
+	\lstinputlisting[language=Python]{Subrotinas/programa_para_o_prof/DesacelerarExcel.txt}
+	
+	\section{Código VBA: ReexibirPlanilhas.xlsx}\label{apx:D}
+	
+	\lstinputlisting[language=Python]{Subrotinas/programa_para_o_prof/ReexibirPlanilhas.txt}
+	
+	\section{Código VBA: OcultarPlanilhas.xlsx}\label{apx:E}
+	
+	\lstinputlisting[language=Python]{Subrotinas/programa_para_o_prof/OcultarPlanilhas.txt}
+	
+	\else
+	\if\mycmd1
+	
+	\newpage
+	\section{Código Python: \texttt{main.py}}\label{apx:main}
+	
+	Esta sub-rotina (\ref{cod:main}) trata-se do código-fonte que carrega, armazena e manipula as demais funções, como o $ k $ -means, entre outras \cite{Kiusalaas2010, Langtangen2009, McKinney2018, McKinney2018a, Ramalho2018, Grus2009}.
+	
+	\lstinputlisting[language=Python]{Subrotinas/k_means/main.py}\label{cod:main}
+	
+	\section{Código Python: \texttt{validacoes\_das\_variaveis.py}}
+	\label{apx:validacoesdasvariaveis}
+	
+	Esta função (\ref{cod:validacoesdasvariaveis}) executa a validação das variáveis digitadas pelo usuário, para garantir que dados incoerentes sejam inicialmente executados pela aplicação e causem \textit{bugs} \cite{Kiusalaas2010, Langtangen2009, McKinney2018, McKinney2018a, Ramalho2018, Grus2009}.
+	
+	\lstinputlisting[language=Python]{Subrotinas/k_means/validacoes_das_variaveis.py}\label{cod:validacoesdasvariaveis}
+	
+	\section{Código Python: \texttt{gerar\_relatorio\_em\_planilha.py}}\label{apx:gerar_relatorio_em_planilha}
+	
+	Esta função (\ref{cod:gerarrelatorioemplanilha}) gera o relatório em planilha para que os resultados sejam manipulados com facilidade a partir do Excel \cite{McKinney2018, McKinney2018a, Ramalho2018, Grus2009}.
+	
+	\lstinputlisting[language=Python]{Subrotinas/k_means/gerar_relatorio_em_planilha.py}\label{cod:gerarrelatorioemplanilha}
+	
+	\section{Código Python: \texttt{gerar\_grafico\_dendrograma.py}}\label{apx:gerar_grafico_dendrograma}
+	
+	Esta função (\ref{cod:gerargraficodendrograma}) gerar o dendrograma \cite{2018e}.
+	
+	\lstinputlisting[language=Python]{Subrotinas/k_means/gerar_grafico_dendrograma.py}\label{cod:gerargraficodendrograma}
+	
+	\section{Código Python: \texttt{gerar\_grafico\_elbow\_data.py}}\label{apx:gerargraficoelbowdata}
+	
+	Esta função (\ref{cod:gerargraficoelbowdata}) gerar o Elbow Data Chart.
+	
+        \lstinputlisting[language=Python]{Subrotinas/k_means/gerar_grafico_elbow_data.py}\label{cod:gerargraficoelbowdata}
+
+        \section{Código Python: \texttt{kmeans\_metrics\_demo.py}}\label{apx:kmeans_metrics_demo}
+
+        \lstinputlisting[language=Python]{kmeans_metrics_demo.py}
+
+        \else
+        % Nada
+        \fi
+        \fi
+	
+	\ifx\mycmd\undefined
+	% Nada
+	\else
+	\if\mycmd1
+	%			\begin{landscape}
+		
+		\includepdf[pages=1, scale=1, angle=0, pagecommand=\section{Dados das Aeronaves Civis},offset=0cm 0cm]{data/aeronaves_civis.pdf}
+		
+		\includepdf[pages=2-12, scale=1, angle=0, pagecommand={},offset=0cm 0cm]{data/aeronaves_civis.pdf}
+		
+		\includepdf[pages=1, scale=1, angle=0, pagecommand={\section{Dados das Aeronaves Militares}},offset=0cm 0cm]{data/aeronaves_militares.pdf}
+		
+		\includepdf[pages=2-28, scale=1, angle=0,offset=0cm 0cm]{data/aeronaves_militares.pdf}
+		
+		
+		%			\end{landscape}
+	
+	\else
+	% Nada
+	\fi
+	\fi
+	
+\end{document}

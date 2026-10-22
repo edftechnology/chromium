@@ -1,0 +1,28 @@
+\documentclass[12pt]{article} % Tamanho de letra 12, papel A4, Estilo de artigo
+
+\input{preamble.tex}
+\input{variables.tex}
+
+\begin{document}
+	
+	% Folha de Registro do Documento
+	% Valores dos campos do formulario
+	\FRDitadata{\frdDataPublicacao}
+	\FRDitadocnro{\frdNumeroRegistro} %(o número de registro você solicita a biblioteca)
+	\FRDitaorgaointerno{Instituto Tecnológico de Aeronáutica -- ITA}
+	%Exemplo no caso de pós-graduação: Instituto Tecnol{\'o}gico de Aeron{\'a}utica -- ITA
+	\FRDitapalavrasautor{\frdPalavrasAutor}
+	\FRDitapalavrasresult{\frdPalavrasResultado}
+	%Exemplo no caso de graduação (TG):
+	%\FRDitapalavraapresentacao{Trabalho de Graduação, ITA, São José dos Campos, 2015. \NumPenultimaPagina\ páginas.}
+	%Exemplo no caso de pós-graduação (msc, dsc):
+	\FRDitapalavraapresentacao{ITA, São José dos Campos. Curso de Doutorado. Programa de Pós-Graduação em Engenharia Eletrônica e de Computação. Área de Informática. Orientador: Prof.~Dr. Nei Yoshihiro Soma. Coorientador: Prof.~Dr. Rubens Junqueira Magalhães Afonso. Defesa em 30/11/2020. Publicada em 11/01/2021.}
+	%\FRDitaresumo{\input{Cap0/resumo}}
+	\FRDitaresumo{\input{abstract}}
+	%  Primeiro Parametro: Nacional ou Internacional -- N/I
+	%  Segundo parametro: Ostensivo, Reservado, Confidencial ou Secreto -- O/R/C/S
+	\FRDitaOpcoes{N}{O}
+	% Cria o formulario
+	\itaFRD
+	
+\end{document}

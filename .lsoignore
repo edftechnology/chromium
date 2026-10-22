@@ -1,0 +1,5 @@
+# Supplemental LSO ignore rules.
+# Patterns are applied after .olignore, so use ! to re-include files needed on Overleaf.
+#
+# Example:
+# !docs/references/selected_reference.pdf

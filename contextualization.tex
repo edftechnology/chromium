@@ -1,0 +1,40 @@
+\documentclass[12pt]{article} % Tamanho de letra 12, papel A4, Estilo de artigo
+
+\input{preamble.tex}
+\input{variables.tex}
+
+\begin{document}
+	
+	\section{Contextualização do Problema}
+	
+		A proposta deste trabalho é classificar a partir de Inteligência Artificial (AI) um Big Data de motores de aeronaves, sobretudo pela emissão dos gases de saída em possíveis grupos, sendo que cada grupo deve conter motores de aeronaves com alguma semelhança categórica segundo suas características de projeto: condições de pressão, temperatura, dimensões etc..
+		
+		Sendo assim, com uma Taxonomia Numérica \cite{Manktelow2010} ou Análise Computacional de Clustering (Data Mining) \cite{Anderberg1973}, escolhe-se a \textit{priori}, o número de grupos ($ k $) que deverão dendrogramar os motores de aeronaves de pouca, média ou muita emissão; o que servirá como insumo informativo para pré-projetos de novas motores aeronaves.
+	
+	\section{Identificação do Problema de Pesquisa}	
+	
+		Os problemas da pesquisa podem ser listados, conforme abaixo:
+		
+		\begin{itemize}
+			
+			\item \textbf{Classificar os motores de aeronaves por grupos de emissões pela suas similaridades o que explicita e ranqueia os projetos}: classificar por ordem do melhor para o \quotes{priori}, neste caso, pelas emissões dos motores de aeronaves;
+			
+			\item \textbf{Determinar qual o número de grupos que os motores de aeronaves devem ser classificadas para obter a melhor ranque}: destacar o número de segregações (2, 3, 4, ..., $ N $) os motores das aeronaves devem ser separados;
+			
+			\item \textbf{Determinar quais as melhores combinações das características de projeto de motores, sobretudo pelas suas emissões, para um desenvolvimento (ou ajuste) de um projeto, segue as características}:
+			
+			\input{tables/heatmap_variables_contextualization.tex}
+			
+			As variáveis foram numeradas, pois quando são gerados os mapas de calor, tanto para as correlações quanto para os $ p $-values, foi trocado o nome da variável pelo índice, \autoref{sec:mapadecalorfiltrado} e \autoref{sec:pvaluesfiltrado}.
+			
+			\item \textbf{Determinar qual são os projeto ímpares/únicos}: destacar qual o(s) melhor(es) motores (alvo) bem como o(s) piore(s) impróprios;
+			
+			\item \textbf{Determinar qual a melhor técnica ou combinação a ser aplicada}: aplicar várias técnicas matemáticas -- possivelmente usando o processamento paralelo -- para indicar qual a melhor entre elas, modelos competidores.
+			
+%			\item \textbf{Desenvolver uma aplicação que possa ser executada em qualquer plataforma}: a(s) aplicação(ões) computacionais devem ser pensadas para ser(em) executadas nas diversas plataformas (\texttt{Windows}, \texttt{Linux}, \texttt{MacOs} etc.);
+			
+%			\item \textbf{Direcionar o estudo dos subsistemas dos motores de aeronaves (propulsivo, estrutural etc.)}: indicar o sistema de estudo propulsivo, foco da pesquisa em uma segunda etapa.
+			
+		\end{itemize}
+		
+\end{document}

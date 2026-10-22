@@ -1,0 +1,41 @@
+\documentclass[12pt]{article} % Tamanho de letra 12, papel A4, Estilo de artigo
+
+\input{preamble.tex}
+\input{variables.tex}
+
+\begin{document}
+	
+	\newpage
+	\pagestyle{fancy}
+	\thispagestyle{empty}
+	\section*{Lista de Definições}
+	\addcontentsline{toc}{section}{Lista de Defini\c{c}\~oes}
+    \begin{description}
+        \item[EEDB] \textit{Engine Emissions Databank}: base oficial da ICAO que reúne os dados de emissões dos motores certificados.
+        
+        \item[Índice de Emissão (EI)] Métrica de emissões normalizada pelo consumo de combustível, usualmente em $ \mathrm{g/kg} $ para comparar motores em diferentes modos do ciclo LTO.
+        
+        \item[Bypass Ratio (B/P Ratio)] Razão entre a vazão de ar que contorna o núcleo do motor e a vazão que passa pelo núcleo, parâmetro central para caracterização de turbofans.
+        
+        \item[Pressure Ratio] Razão de pressão total de entrada e saída do compressor principal, relacionada ao desempenho termodinâmico do motor.
+        
+        \item[Ciclo LTO] Sequência de modos de operação (taxi/idle, approach, climb-out, take-off) usada para quantificar emissões regulamentares em solo e baixa altitude.
+        
+        \item[Dendrograma] Representação hierárquica que mostra as distâncias entre grupos formados pelo algoritmo de clusterização, guiando o corte em $ K $ clusters.
+        
+        \item[Elbow Data Chart (EDC)] Gráfico que relaciona o número de clusters $ K $ ao WSS (soma dos quadrados das distâncias intracluster), apoiando a identificação de uma região de redução marginal menor; o cotovelo é um diagnóstico, não uma escolha automática.
+        
+        \item[Kneedle] Heurística que determina o $ K $ ótimo ao maximizar a diferença entre a curva do EDC e a diagonal $ y = x $, destacando o primeiro ganho expressivo de $ WS $.
+        
+        \item[Distância à corda] Método que mede o afastamento perpendicular entre cada ponto do EDC e a reta que conecta os extremos, escolhendo o $ K $ mais distante dessa corda.
+        
+        \item[Regressão segmentada] Ajuste de duas retas ao EDC para estimar o ponto de quebra que minimiza o erro quadrático total e define o cotovelo.
+        
+        \item[Curvatura discreta] Cálculo do maior ângulo formado por três pontos consecutivos do EDC, sinalizando a inflexão de maior concavidade.
+        
+        \item[One-hot encoding] Estratégia que transforma variáveis categóricas em vetores binários (\textit{dummies}), eliminando relações de ordem à custa do aumento de dimensionalidade.
+        
+        \item[\textit{Label encoding}] Codificação que atribui inteiros sequenciais a cada categoria, preservando o número de atributos e permitindo reprodutibilidade, ainda que introduza um viés ordinal.
+    \end{description}
+	
+\end{document}

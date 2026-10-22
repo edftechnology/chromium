@@ -1,0 +1,37 @@
+\appendix
+\chapter{Apêndice}
+
+Para garantir transparência e reprodutibilidade, listamos a seguir os principais arquivos dos códigos-fonte e seus pré e pós-processamentos. Os trechos são incluídos com numeração de linhas para referência.
+
+\subsection{\texorpdfstring{\texttt{normal\_sigma\_bands\_outliers.py}}{normal_sigma_bands_outliers.py}}\label{app:normal_sigma_bands_outliers}
+
+    \lstinputlisting[
+        caption={Distribuição normal com bandas sigma e outliers (script de gráfico).},
+        label={lst:normal_sigma_bands_outliers},
+        language=Python,
+        inputencoding=utf8,
+        basicstyle=\scriptsize\ttfamily,
+        numberstyle=\scriptsize\color{Gray}
+        ]{\detokenize{scripts/python/normal_sigma_bands_outliers.py}}
+
+\subsection{\texorpdfstring{\texttt{main\_audithas.py}}{main_audithas.py}}\label{app:main_audithas}
+
+    \lstinputlisting[
+        caption={Fluxo principal do Audithas, contemplando integrações de pré e pós-processamento.},
+        label={lst:main_audithas},
+        language=Python,
+        inputencoding=utf8,
+        basicstyle=\scriptsize\ttfamily,
+        numberstyle=\scriptsize\color{Gray}
+        ]{\detokenize{subs/submodules/audithas/main_audithas.py}}
+
+\subsection{\texorpdfstring{\texttt{main\_k\_means.py}}{main_k_means.py}}\label{app:main_k_means}
+
+    \lstinputlisting[
+        caption={Fluxo principal do módulo \texttt{k\_means\_thesis} e sua orquestração de rotinas.},
+        label={lst:main_k_means},
+        language=Python,
+        inputencoding=utf8,
+        basicstyle=\scriptsize\ttfamily,
+        numberstyle=\scriptsize\color{Gray}
+        ]{\detokenize{subs/submodules/k_means_master_thesis/main_k_means.py}}

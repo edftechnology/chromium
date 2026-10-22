@@ -1,0 +1,136 @@
+%%% Exemplo de utilização da classe ITA
+%%%																															
+%%%   por        Fábio Fagundes Silveira   -  ffs [at] ita [dot] br
+%%%              Benedito C. O. Maciel     -  bcmaciel [at] ita [dot] br
+%%%              Giovani Volnei Meinertz   -  giovani [at] ita [dot] br
+%%%    	         Hudson Alberto Bode       -  bode [at] ita [dot]br
+%%%    	         P. I. Braga de Queiroz    -  pi [at] ita [dot] br
+%%%    	         Jorge A. B. Gripp         -  gripp [at] ita [dot] br
+%%%    	         Juliano Monte-Mor         -  jamontemor [at] yahoo [dot] com [dot] br
+%%%    	         Tarcisio A. B. Gripp      -  tarcisio.gripp [at] gmail [dot] com
+%%%    	         
+%%%
+%%%  IMPORTANTE: O texto contido neste exemplo nao significa absolutamente nada.  :-)
+%%%              O intuito aqui eh demonstrar os comandos criados na classe e suas
+%%%              respectivas utilizacoes.
+%%%
+%%%  Tese.tex  2016-08-25
+%%%  $HeadURL: http://www.apgita.org.br/apgita/teses-e-latex.php $
+%%%
+%%% ITALUS
+%%% Instituto Tecnológico de Aeronáutica --- ITA, Sao Jose dos Campos, Brasil
+%%%                   http://groups.yahoo.com/group/italus/
+%%% Discussion list: italus {at} yahoogroups.com
+%%%
+%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+% Para alterar o TIPO DE DOCUMENTO, preencher a linha abaixo \documentclass[?]{?}
+%   \documentclass[tg]{ita}			= Trabalho de Graduacao
+%   \documentclass[tgfem]{ita}	= Para Engenheiras
+%   								msc     		= Dissertacao de Mestrado
+%   								mscfem   		= Para Mestras
+%   								dsc      		= Tese de Doutorado
+%   								dscfem   		= Para Doutoras
+%   								quali    		= Exame de Qualificacao
+%   								qualifem 		= Exame de Qualificacao para Doutoras
+% Para 'Draft Version'/'Versao Preliminar' com data no rodape, adicionar 'dv':
+%   \documentclass[dsc, dv]{ita} 
+% Para trabalhos em Inglês, adicionar 'eng':
+%   \documentclass[dsc, eng]{ita}
+%		\documentclass[dsc, eng, dv]{ita}
+%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+%\PassOptionsToPackage{backref=page}{hyperref}
+
+%\documentclass[dsc]{ita}    % ITA.cls based on standard book.cls
+% Quando alterar a classe, por exemplo de [msc] para [msc, eng]) rode mais uma vez o botão BUILD OUTPUT caso haja erro
+
+\documentclass[msc]{ita}    % ITA.cls based on standard book.cls
+
+\input{preamble.tex}
+\input{variables.tex}
+
+\frontmatter
+\makenoidxglossaries
+\input{list_of_acronyms.tex}
+\input{list_of_symbols.tex}
+
+%\hyphenation{param-e-ter-ization}
+ 
+\begin{document}
+	
+	\thispagestyle{empty}
+	\input{cover_page} \clearpage  % [x] Revisão do texto
+	
+	% Folha de Rosto e Capa para o caso do TG
+	\maketitle
+	
+	% Dedicatoria:
+	\input{dedication.tex}  % [x] Revisão do texto
+	
+	% Agradecimentos:
+	\input{acknowledgments.tex}  % [x] Revisão do texto
+	
+	% Epigrafo:
+	\input{epigraph.tex}  % [x] Revisão do texto
+	
+	% Resumo
+	\input{resumo.tex}  % [x] Revisão do texto
+	
+	% Abstract
+	\input{abstract.tex}  % [x] Revisão do texto
+	
+	% Listas:
+	\glsaddall
+
+	% Lista de abreviaturas
+	\printnoidxglossary[type=\acronymtype,
+	    title=\listofabbreviationsname,
+	    sort=standard,
+	    nonumberlist]
+	\pdfbookmark[0]{\listofabbreviationsname}{listaabreviaturas}
+
+	% Lista de simbolos
+	\printnoidxglossary[
+	    title=\listofsymbolsname,
+	    sort=use,
+	    nonumberlist]
+	\pdfbookmark[0]{\listofsymbolsname}{listasimbolos}
+
+	\input{list_of_definitions.tex}
+	\input{list_of_illustrations.tex}
+	\input{list_of_nomenclatures.tex}
+	\input{list_of_tables.tex}
+	
+	% Sumario
+	\tableofcontents
+	
+	\mainmatter
+	% Os capitulos comecam aqui
+	
+	% Desenvolvimento:
+	\input{introduction.tex}
+	\input{contextualization.tex}
+	
+	% Descrição numérica:
+	\input{numerical_description.tex}
+	\input{resultados_e_discussoes.tex}
+	
+	% Conclusão e trabalhos futuros:
+%	\input{conclusion.tex}
+%	\input{future_works.tex}
+%	\input{outras_aplicacoes_em_engenharia.tex}
+	
+	% Apêndices:
+    \input{appendix.tex}
+	
+	% Anexos:
+	\input{attachments.tex}
+	
+	% REFERENCIAS BIBLIOGRAFICAS
+%	\input{references.tex}
+	\renewcommand\bibname{\itareferencesnamebabel}
+	\bibliography{references}	
+		
+	\input{document_registration_sheet.tex}
+	
+\end{document}
+% Fim do Documento. O massacre acabou!!! :-)

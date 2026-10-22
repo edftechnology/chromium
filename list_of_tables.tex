@@ -1,0 +1,16 @@
+\documentclass[12pt]{article} % Tamanho de letra 12, papel A4, Estilo de artigo
+
+\input{preamble.tex}
+\input{variables.tex}
+
+\begin{document}
+	
+	\newpage
+	\pagestyle{fancy}
+	\thispagestyle{empty}
+	%\shipout\null % Inserir página em branco
+	\renewcommand{\listtablename}{Lista de Tabelas}
+	\listoftables % Criar lista de tabelas existentes no documento
+	\addcontentsline{toc}{section}{Lista de Tabelas}
+	
+\end{document}

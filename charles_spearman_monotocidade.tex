@@ -1,0 +1,22 @@
+\subsection{Charles Spearman (monotonicidade)}
+		
+			O Coeficiente de Correlação de Charles Spearman (1863-1945, psicólogo e estatístico) ou Densidade $ \rho $ (letra grega) de Spearman, retorna o grau de intensidade do poder preditivo de uma função monótona - que preserva ou inverte a relação de ordem. Se a função preserva a relação, é chamada de crescente, senão, decrescente - da correlação entre dois conjuntos de dados (x, y). Em outras palavras, o coeficiente retorna a direção da tendência (crescente ou decrescente) de um conjunto em relação ao outro e vice-versa.
+			
+			O Coeficiente de Correlação de Spearman entre dois conjuntos de dados é igual ao de Karl Pearson. Entretanto, enquanto o Coeficiente de Pearson analisa correlações lineares, o de Spearman analisa relações monótonas descritas anteriormente, monotocidade, sejam estas lineares ou não-lineares. 
+			
+			Trata-se de um coeficiente adequado tanto para conjunto de dados contínuos ou discretos, isso inclui, dados ordinais. Este coeficiente, assim como o de Kendall podem ser considerados como casos especiais de coeficiente de correlação geral.
+			
+			Este coeficiente pode assumir valores entre -1 e 1, inclusive algum dos extremos \cite{ref_spearman}.
+					
+			\begin{align}
+				\rho = r_{s} = \dfrac{cov(rg_{X}, rg_{Y})}{\sigma(rg_{X}) \, \sigma(rg_{Y})}
+			\end{align}
+			
+			Sendo: \newline
+			
+			$ \begin{cases}
+					\rho = r_{s} & \text{: Coeficiente de Correlação de Charles Spearman} \\[6pt]
+					cov(rg_{X}, rg_{Y}) & \text{: covariância entre os postos (dados organizados) de $X$ e $Y$} \\[6pt]
+					\sigma(rg_{X}) & \text{: desvio-padrão dos postos (dados organizados) de $X$} \\[6pt]
+					\sigma(rg_{Y}) & \text{: desvio-padrão dos postos (dados organizados) de $Y$}
+				\end{cases} $

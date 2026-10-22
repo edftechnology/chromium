@@ -1,0 +1,140 @@
+\newglossaryentry{sym:adjacency_matrix}{
+    name={$\mathcal{A} \in \{0,1\}^{N_{ob} \times N_{ob}}$},
+    description={matriz de adjacencias entre os obstaculos do territorio},
+    sort={a_adj}
+}
+\newglossaryentry{sym:connectivity_matrix}{
+    name={$\mathcal{C} \in \{0,1\}^{N_{ob} \times N_{ob}}$},
+    description={matriz de conectividade utilizada para verificar continuidade entre obstaculos},
+    sort={c_conn}
+}
+\newglossaryentry{sym:cluster_centroid}{
+    name={$C_{\ell} \in \mathbb{R}^{2}$},
+    description={coordenadas do centroide (cluster $\ell$) obtido pelo particionamento},
+    sort={c_cent}
+}
+\newglossaryentry{sym:distance_to_medoid}{
+    name={$d_{i,\bar{m}_{k}}$},
+    description={distancia do elemento $i$ ao medioide $\bar{m}_{k}$ do respectivo cluster},
+    sort={d_med}
+}
+\newglossaryentry{sym:agent_obstacle_vector}{
+    name={$\Delta r_{ao} \in \mathbb{R}^{N_{ob}}$},
+    description={vetor de distancias agente-obstaculo},
+    sort={delta_ao}
+}
+\newglossaryentry{sym:obstacle_distance_matrix}{
+    name={$\Delta r_{o} \in \mathbb{R}^{N_{ob} \times N_{ob}}$},
+    description={matriz de distancias entre obstaculos},
+    sort={delta_o}
+}
+\newglossaryentry{sym:gamma_weight}{
+    name={$\gamma \in \mathbb{R}_{+}$},
+    description={peso associado ao termo de consumo de combustivel na funcao de custo},
+    sort={gamma}
+}
+\newglossaryentry{sym:graph_obstacles}{
+    name={$\mathcal{G} = (\mathcal{O}, \Omega)$},
+    description={grafo nao direcionado que descreve as adjacencias do conjunto de obstaculos $\mathcal{O}$},
+    sort={g_graph}
+}
+\newglossaryentry{sym:predicted_generic_variable}{
+    name={$\hat{\odot}[k+\alpha \mid k]$},
+    description={valor previsto da variavel generica $\odot$ para o instante $k+\alpha$ usando dados ate $k$},
+    sort={hat_odo}
+}
+\newglossaryentry{sym:k_index}{
+    name={$k \in \mathbb{N}$},
+    description={indice da iteracao ou instante corrente},
+    sort={k_index}
+}
+\newglossaryentry{sym:k_clusters}{
+    name={$K \in \mathbb{N}$},
+    description={número de clusters considerados no particionamento do K-means},
+    sort={k_clusters}
+}
+\newglossaryentry{sym:n_observations}{
+    name={$n \in \mathbb{N}$},
+    description={quantidade total de observacoes disponiveis para agrupamento},
+    sort={n_obs}
+}
+\newglossaryentry{sym:nc_clusters}{
+    name={$N_c \in \mathbb{N}$},
+    description={numero de clusters (medioides) selecionados apos a convergencia},
+    sort={nc}
+}
+\newglossaryentry{sym:nob_obstacles}{
+    name={$N_{ob} \in \mathbb{N}$},
+    description={quantidade de obstaculos no territorio analisado},
+    sort={nob}
+}
+\newglossaryentry{sym:terminal_set}{
+    name={$\mathcal{Q} \subset \mathbb{R}^{4}$},
+    description={conjunto admissivel de estados terminais da planta},
+    sort={q_set}
+}
+\newglossaryentry{sym:agent_position}{
+    name={$r = (r_x, r_y) \in \mathbb{R}^{2}$},
+    description={posicao do agente no plano horizontal},
+    sort={r_pos}
+}
+\newglossaryentry{sym:territory_region}{
+    name={$\mathcal{T} \subset \mathbb{R}^{2}$},
+    description={regiao do plano onde estao definidos os obstaculos e as trajetorias},
+    sort={t_region}
+}
+\newglossaryentry{sym:sampling_period}{
+    name={$T \in \mathbb{R}_{+}$},
+    description={periodo de amostragem do controlador},
+    sort={t_sampling}
+}
+\newglossaryentry{sym:control_input}{
+    name={$u \in \mathcal{U}$},
+    description={vetor de entrada de controle dentro do conjunto admissivel $\mathcal{U}$},
+    sort={u_input}
+}
+\newglossaryentry{sym:control_set}{
+    name={$\mathcal{U} \subset \mathbb{R}^{2}$},
+    description={politopo das entradas de controle que contem a origem},
+    sort={u_set}
+}
+\newglossaryentry{sym:vx_vy}{
+    name={$v_x$, $v_y$},
+    description={componentes da velocidade do agente nos eixos $r_x$ e $r_y$},
+    sort={v_xy}
+}
+\newglossaryentry{sym:obstacle_width}{
+    name={$w \in \mathbb{R}_{+}$},
+    description={largura media de um obstaculo considerado na modelagem},
+    sort={w_width}
+}
+\newglossaryentry{sym:plant_state}{
+    name={$x \in \mathcal{X}$},
+    description={estado instantaneo da planta controlada},
+    sort={x_state}
+}
+\newglossaryentry{sym:sample_xi}{
+    name={$x_i$},
+    description={i-ésimo elemento (amostra) utilizado pelo algoritmo K-means},
+    sort={xi}
+}
+\newglossaryentry{sym:state_set}{
+    name={$\mathcal{X} \subset \mathbb{R}^{4}$},
+    description={politopo dos estados admissiveis},
+    sort={x_set}
+}
+\newglossaryentry{sym:medoid_mk}{
+    name={$\bar{m}_{k} \in \mathbb{R}^{d}$},
+    description={medioide do cluster $k$ retornado pelo algoritmo},
+    sort={mbar}
+}
+\newglossaryentry{sym:within_sum}{
+    name={$WS$},
+    description={soma dos quadrados das distâncias intracluster (WSS) referente ao cluster analisado},
+    sort={ws}
+}
+\newglossaryentry{sym:within_sum_total}{
+    name={$WS_{Total}$},
+    description={soma intra-cluster global usada na analise do Elbow Data},
+    sort={ws_total}
+}

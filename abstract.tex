@@ -1,0 +1,17 @@
+\documentclass[12pt]{article} % Tamanho de letra 12, papel A4, Estilo de artigo
+
+\input{preamble.tex}
+\input{variables.tex}
+
+\begin{document}
+% \chapter{Abstract}
+	
+	\begin{englishabstract}
+		\noindent
+		
+                This work presents a data-driven methodology to classify aircraft engines based on design and thermodynamic characteristics related to efficiency and emissions. The proposed approach aims to identify similarities among different engine configurations using unsupervised machine learning techniques, enabling a systematic comparison of propulsion technologies and supporting technology assessment studies. The analysis is based on publicly available engine data provided by the European Union Aviation Safety Agency (EASA). A set of key design and performance parameters, including overall pressure ratio, turbine inlet temperature, bypass ratio, and other relevant variables, is selected to describe each engine in a multidimensional feature space. Prior to clustering, the dataset is preprocessed through normalization, consistency checks, and the treatment of incomplete entries in order to ensure robustness and comparability among samples. The K-means clustering algorithm is applied to group engines with similar characteristics. Several clustering configurations are evaluated by varying the number of clusters and applying standard validation metrics to identify an adequate partition of the dataset. The resulting clusters are examined to identify technological patterns, distinguish different design philosophies, and highlight engine configurations that exhibit relatively higher efficiency or more favorable emission-related characteristics within their respective groups. The clustering results indicate that engines with comparable thermodynamic and design characteristics tend to form well-defined groups, reflecting similarities in performance level and technological maturity. This classification allows a clearer comparison between engine families and supports the identification of representative configurations within each cluster. In addition, the analysis provides insights into the relative importance of the selected variables in the clustering process, contributing to a better understanding of how design parameters influence engine grouping. The proposed methodology does not rely on predefined classifications and allows patterns to emerge directly from the data. As such, it provides a flexible and reproducible framework for the analysis of aircraft engine technologies. The results may support future studies on emissions assessment, engine benchmarking, and the selection of representative parameters for the development of more efficient and environmentally sustainable aircraft propulsion systems.
+	\end{englishabstract}
+	
+    \textbf{Keywords:} aircraft engine taxonomy, emission classification, Big Data, dendrogram, K-means, Python.
+	
+\end{document}

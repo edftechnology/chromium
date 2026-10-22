@@ -1,0 +1,51 @@
+\documentclass[12pt]{article} % Tamanho de letra 12, papel A4, Estilo de artigo
+
+\input{preamble.tex}
+\input{variables.tex}
+
+\begin{document}
+	
+	\begin{titlepage} %Iniciar título
+			
+			\centering
+			\begin{figure}[H] % Mantém a figura fixa no ponto inserido
+				\centering %centralizar a imagem abaixo
+                \includegraphics[scale=0.7]{figures/ita_logo.jpg}\\
+				[0.5cm]
+		                {\large \instituicao}\\
+				[3cm]
+				
+				%Fonte(s):
+				%http://eventos.ufabc.edu.br/xixsibee/UFABC%20LOGO.jpg
+				%Acessado em: 25/11/2015
+				
+				%\caption[Universidade Federal do ABC]{Universidade Federal do ABC}}
+		\end{figure}
+		
+		
+		%\maketitle %Criar título
+		
+		\textsc{\LARGE{\nomedadisciplina}}\\
+		[4cm]
+		
+		\textsc{\Huge \nomedotrabalho}\\
+		[4cm]
+		
+		\normalsize
+		\begin{flushright} %Alinhar à direita
+		        Nome: \nomedoaluno \\
+			
+			%			[1cm]
+			\bigskip
+		        Prof. Dr.: \orientador\\
+			%			\bigskip
+			[3cm]
+		\end{flushright}
+		
+		\centering %Centralizar
+		\cidade\\
+		\the\year %Inserir a data atual
+		
+		\end{titlepage} %Finalizar título
+	
+\end{document}

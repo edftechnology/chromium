@@ -2,3 +2,47 @@
 	path = subs/submodules/shell_scripts
 	url = git@github.com:edftechnology/shell_scripts.git
 	branch = main
+[submodule "subs/submodules/codex_configuration_scripts"]
+	path = subs/submodules/codex_configuration_scripts
+	url = git@github.com:edftechnology/codex_configuration_scripts.git
+	branch = main
+[submodule "subs/submodules/gemini_configuration_scripts"]
+	path = subs/submodules/gemini_configuration_scripts
+	url = git@github.com:edftechnology/gemini_configuration_scripts.git
+	branch = main
+[submodule "subs/submodules/git_scripts"]
+	path = subs/submodules/git_scripts
+	url = git@github.com:edftechnology/git_scripts.git
+	branch = main
+[submodule "subs/submodules/python_scripts"]
+	path = subs/submodules/python_scripts
+	url = git@github.com:edftechnology/python_scripts.git
+	branch = main
+[submodule "subs/submodules/markdown_scripts"]
+	path = subs/submodules/markdown_scripts
+	url = git@github.com:edftechnology/markdown_scripts.git
+	branch = main
+[submodule "subs/submodules/txt_scripts"]
+	path = subs/submodules/txt_scripts
+	url = git@github.com:edftechnology/txt_scripts.git
+	branch = main
+[submodule ".github/workflows"]
+	path = .github/workflows
+	url = git@github.com:edftechnology/workflows.git
+	branch = main
+[submodule ".vscode"]
+	path = .vscode
+	url = git@github.com:edftechnology/.vscode.git
+	branch = main
+[submodule "subs/submodules/ai_inspector"]
+	path = subs/submodules/ai_inspector
+	url = git@github.com:edftechnology/ai_inspector.git
+	branch = main
+[submodule "subs/submodules/latex_thesis_template"]
+	path = subs/submodules/latex_thesis_template
+	url = git@github.com:edftechnology/latex_thesis_template.git
+	branch = ita_master_thesis
+[submodule "subs/submodules/lso_latex_synchronizer_with_overleaf"]
+	path = subs/submodules/lso_latex_synchronizer_with_overleaf
+	url = git@github.com:edftechnology/lso_latex_synchronizer_with_overleaf.git
+	branch = main

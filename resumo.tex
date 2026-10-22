@@ -1,0 +1,22 @@
+\documentclass[12pt]{article} % Tamanho de letra 12, papel A4, Estilo de artigo
+
+\input{preamble.tex}
+\input{variables.tex}
+
+\begin{document}
+% \chapter{Resumo}
+	
+%	\newpage
+	\pagestyle{fancy}
+	\thispagestyle{empty}
+	%\shipout\null % Inserir página em branco
+	\begin{abstract}
+		\noindent
+		
+                Este trabalho apresenta uma metodologia baseada em dados para classificar motores de aeronaves com base em características de projeto e termodinâmicas relacionadas à eficiência e emissões. A abordagem proposta visa identificar similaridades entre diferentes configurações de motores utilizando técnicas de aprendizado de máquina não supervisionado, permitindo uma comparação sistemática de tecnologias de propulsão e apoiando estudos de avaliação tecnológica. A análise é baseada em dados de motores disponíveis publicamente, fornecidos pela Agência Europeia para a Segurança da Aviação (EASA). Um conjunto de parâmetros-chave de projeto e desempenho, incluindo a taxa de compressão total, a temperatura de entrada da turbina, a taxa de derivação e outras variáveis ??relevantes, é selecionado para descrever cada motor em um espaço de características multidimensional. Antes do agrupamento, o conjunto de dados é pré-processado por meio de normalização, verificações de consistência e tratamento de entradas incompletas, a fim de garantir robustez e comparabilidade entre as amostras. O algoritmo de agrupamento K-means é aplicado para agrupar motores com características semelhantes. Diversas configurações de agrupamento são avaliadas variando-se o número de clusters e aplicando-se métricas de validação padrão para identificar uma partição adequada do conjunto de dados. Os agrupamentos resultantes são examinados para identificar padrões tecnológicos, distinguir diferentes filosofias de projeto e destacar configurações de motores que apresentam eficiência relativamente maior ou características relacionadas a emissões mais favoráveis ??dentro de seus respectivos grupos. Os resultados do agrupamento indicam que motores com características termodinâmicas e de projeto comparáveis ??tendem a formar grupos bem definidos, refletindo similaridades no nível de desempenho e maturidade tecnológica. Essa classificação permite uma comparação mais clara entre famílias de motores e auxilia na identificação de configurações representativas dentro de cada agrupamento. Além disso, a análise fornece informações sobre a importância relativa das variáveis ??selecionadas no processo de agrupamento, contribuindo para uma melhor compreensão de como os parâmetros de projeto influenciam o agrupamento de motores. A metodologia proposta não se baseia em classificações predefinidas e permite que os padrões emerjam diretamente dos dados. Dessa forma, ela fornece uma estrutura flexível e reproduzível para a análise de tecnologias de motores aeronáuticos. Os resultados podem apoiar estudos futuros sobre avaliação de emissões, benchmarking de motores e a seleção de parâmetros representativos para o desenvolvimento de sistemas de propulsão aeronáutica mais eficientes e ambientalmente sustentáveis.
+		
+	\end{abstract}
+	
+    \textbf{Palavras-chave:} taxonomia de motores de aeronaves, classificação de motores para pré-projeto, Big Data de emissões, dendrograma, K-means, Python.
+	
+\end{document}

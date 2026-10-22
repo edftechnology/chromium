@@ -1,0 +1,40 @@
+\documentclass[12pt]{article} % Tamanho de letra 12, papel A4, Estilo de artigo
+
+\input{preamble.tex}
+\input{variables.tex}
+
+\begin{document}
+	
+	\newpage
+	\pagestyle{fancy}
+	\thispagestyle{empty}
+	%\shipout\null % Inserir página em branco
+	
+	\chapter{Introdução}
+	
+		\section{Introdução}
+			
+			% Eden:
+			O problema do particionamento tem grande expressão também na área da Biologia, motivo pelo qual os cientistas criaram um ramo específico chamado de taxonomia, para essa área do conhecimento, a de organismos e plantas. Entretanto, tudo isso, teve início desde a criação das sociedades quando, Aristóteles por volta de $ 300 $ a. C. inicialmente separou, de forma generalista, os seres vivos das plantas e, a \textit{posteriori}, para o caso do primeiro grupo, por exemplo, separou-os pela cor do sangue entre vermelho e não. No século XVIII, Carl von Linné ($ 1707 $ - $ 1778 $), aprimorou o processo taxonômico (utilizado até hoje) que organizou melhor os seres vivos, pois já se conhecia uma quantidade maior de espécies. Atualmente  particionado em cinco reinos: \textit{Monera}, \textit{Protista}, \textit{Fungi}, \textit{Animalia} e \textit{Plantae}; Linné dividiu os seres vivos levando em conta sete critérios (reino, filo, classe, ordem, família, gênero e espécie), o primeiro critério mais generalista e, a medida que se avança o critério, faz-se uma análise mais específica, logo, tem-se uma melhor classificação. Já que o objetivo deste trabalho é classificar as aeronaves, tanto civis como militares, o neologismo Aerotaxonomia torna-se bastante adequado, uma vez que, a palavra aero está relacionada à Engenharia aeroespacial e, por conseguinte, taxonomia significa classificação \cite{Linnaeus1758}, tendo em vista que um termo que seria conveniente para a biologia seria biotaxonomia. Recentemente, foi adicionado um domínio antes do reino. Tendo em vista que a palavra aero (já relacionada) é abrangente, fica conveniente usar, para este caso, Aerotaxonomia de aeronaves (veículos) dado que, poderia ser também de motores (sistema propulsivo). 
+			
+			% Daqui para baixo quem escreveu foi o prof. Ricieri
+			O Big Data, em particular suas duas técnicas ou métodos para  tratar dados, K-means e Dendrogramação, podem servir de modelo para o conhecimento moderno caracterizado pela sua limitada validade temporal. E uma Matemática como a do século XX, que contraria essa particularidade do mundo moderno, século XXI, sociedade liquida de Bauman \cite{Bauman2000}, é inútil para os propósitos de toda e qualquer instituição do saber científico-tecnológico atual e também, muito provável, do futuro.
+			
+			Para o cientista de dados, o Big Data e suas técnicas é o que deve ser estudado e aplicado na Engenharia moderna, em particular na aeronáutica; não porque ofereça um campo novo para as investigações do conhecimento, como aconteceu com a Matemática clássica até então, mas sim porque seus resultados preditivos encorajam a elevar o \textit{status} do Big Data como a principal disciplina que poderá governar as Engenharias, essas que deverão, obrigatoriamente, preocuparem-se com aspectos nunca antes pensados pelos engenheiros como preferências populares, planos de venda, opções de \textit{marketing}, percentuais de sucesso e subjetividades de formas do produto; isso tudo exigido também pelos produtos aeronáuticos.  
+			
+	%		Diante dessas exigências do mercado em relação a profissão de Engenharia não existe outro caminho se não o do Big Data, que possa ajustar os currículos universitários às demandas atuais. 
+			
+			Enquanto o engenheiro tradicional busca a todo custo impor aos fenômenos do mundo teorias que possam explicá-los completamente; o engenheiro de dados analisa-os como eles se apresentam a nós, com certo grau de ambiguidade. Essa abordagem nova, pragmática, que tolera possíveis erros ou desvios de previsão, do ponto de vista semiótico–abducional, alegoriza dois movimentos de predições, de mesma direção e sentidos inversos: dos modelos, com seus símbolos sintáxicos aos dados e com suas minerações computacionais aos modelos. Daí a essência da dissonância entre Engenharia clássica, primeiro sentido e de Engenharia de dados, segundo sentido, estar nas explicações teóricas completas e nos modelos computacionais limitados. 
+			
+			Para um engenheiro de dados, profissional de natureza imediatista, já que atua em uma sociedade cada vez mais liquefeita, a busca de um modelo perfeito, oficial e universalmente abrangente, proíbe-o de qualquer possibilidade de predizer com liberdade, possíveis resultados minimamente assertivos. Assim, a essência do conflito entre esses dois profissionais das exatas deslocados no tempo, resvala na diversidade do conhecimento produzido nos inúmeros setores dessa ou daquela Engenharia, que exigem respostas rápidas e objetivas, mas não extremamente precisas. 
+			
+			Desta forma, sabendo que o Big Data enquanto Matemática que tem influenciado como nunca antes as Engenharias, permitindo inúmeras respostas, resta àquele que se diz engenheiro ou cientista de dados saber quais são as perguntas. 
+			
+			% Daqui para baixo quem escreveu foi o Eden
+			Portanto, a partir desta Matemática moderna, ajustada a sociedade atual e que tem definido novos padrões de solução somado à taxonomia, o principal objetivo deste trabalho é descrever um processo para particionar uma população $ d $-dimensional de aeronaves em $ K $-sets, sejam estas civis ou militares. A modelagem Matemática utilizada é chamada de K-means que, trata-se de uma aproximação eficiente quando há variações de determinadas características entre as classes, porém, reduzindo uma possível subjetividade humana. Apesar do interesse ser minimizar possíveis subjetividades na classificação das aeronaves, deve-se corroborar a análise Matemática com a prática da experiência computacional. O método escolhido para particionar, K-means, é um processo de fácil desenvolvimento e computacionalmente econômico, portanto, factível sobretudo pelo fato de não exigir investimento de altíssimos custos.
+			
+			Além de toda a aplicação envolvida, o método K-means que, originalmente foi concebido como uma tentativa de encontrar um procedimento computacional factível para classificação otimizada de problemas da biologia e propriamente da computação \cite{MacQueen1967}, também é teoricamente pertinente, o que levou a escolhê-lo como ferramenta Matemática deste trabalho. Este método é uma generalização para a média ordinária da amostra, logo, é possível analisar o comportamento assintótico pertinente as características das classes e determinar algum tipo de lei baseada no Big Data das aeronaves quando analisa-se o $ K $ do K-means para um número grande. O modelo matemático K-means é desenvolvido na seção (\ref{subsec:kmeans}), os resultados obtidos sobre o comportamento assintótico é descrito na seção (\ref{sec:ResultadosEDiscussoes}) e as possibilidades de aplicação são indicadas na seção (\ref{sec:OutrasAplicacoesEmEngenharia}).
+			
+			Em geral, o método não converge para uma solução ótima global, embora possivelmente existam casos especiais onde isso acontece. Entretanto, até onde se sabe, não existe método factível que sempre se obtêm solução global. Sendo assim, garante-se que pelo menos um resultado falibalista será encontrado, solução ótima local \cite{MacQueen1967}.
+
+\end{document}
